@@ -12,7 +12,7 @@ year={2022}
 ```
 ## Multi-user AR Application Workflow
 
-Below is an image of the workflow of multi-user AR applications.
+Below is an image of the workflow of multi-user AR applications. The image also shows the different components of the end-to-end latency (1a-1c, 2x and 2a-2d).
 
 <img src="app.png" width="80%"/>
 
@@ -24,9 +24,9 @@ The data directory contains different folders pertaining to various experiments 
 2. Varying MSS experiment (Section 4.6)
 3. ICMP background traffic experiment (Section 4.6)
 4. Power data (Section 5)
+
 Each such folder has sub folders based on the type of experiments. There are two parts to each data collected: Host and the Resolver data.
 
 The Host and Resolver directories contain 2 files: 
 * **capture.pcap**: Packet capture file recorded while doing the measurements. We use this file to extract the delays discussed in Section 4 of the paper.
 * **static_log.logcat**: This file contains application logged timestamps of events like tapping the screen to place an object or when an object resolution is finished.
-
