@@ -1,0 +1,4 @@
+Time,Source_IP,Dest_IP,Protocol,Summary,
+12.249595,100.122.218.243,198.224.186.135,DNS,1472 12.249595 12:06:33.201689 100.122.218.243 198.224.186.135 DNS 86  Standard query 0x5e4d A www.google-analytics.com,
+12.275701,198.224.186.135,100.122.218.243,DNS,1475 12.275701 12:06:33.227795 198.224.186.135 100.122.218.243 DNS 158  Standard query response 0x974f AAAA www.google-analytics.com CNAME www-google-analytics.l.google.com AAAA 2607:f8b0:4006:816::200e,
+12.293608,198.224.186.135,100.122.218.243,DNS,1477 12.293608 12:06:33.245702 198.224.186.135 100.122.218.243 DNS 146  Standard query response 0x5e4d A www.google-analytics.com CNAME www-google-analytics.l.google.com A 142.250.65.238,
