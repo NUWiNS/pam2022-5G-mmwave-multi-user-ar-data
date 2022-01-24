@@ -28,7 +28,7 @@ Each such directory has sub directories based on the type of experiments. There 
 
 The Host and Resolver directories contain 2 files: 
 * **capture.pcap**: Packet capture file recorded while doing the measurements. We use this file to extract the latency components discussed in Section 4 of the paper.
-* **static_log.logcat**: This file contains application logged timestamps of events like tapping the screen to place an object or when an object resolution is finished.
+* **static_log.logcat**: This file contains application logged timestamps of events like tapping the screen to place an object or when an object resolution has finished.
 
 ## Scripts
 
