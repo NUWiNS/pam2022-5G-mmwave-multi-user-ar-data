@@ -1,8 +1,0 @@
---------- beginning of main
---------- beginning of system
-01-04 15:23:57.564 29184 29184 D ar_activity: Screen tap recorded at 2022-01-04 15:23:57.564
-01-04 15:23:57.592 29184 29216 D ar_activity: Anchor can be drawn at time 20220104202357
-01-04 15:23:57.598 29184 29216 D ar_activity: Anchor has been placed at time 20220104202357
-01-04 15:24:01.224 29184 29216 D ar_activity: The anchor id was successfully shared 20220104202401
-01-04 15:24:05.689 29184 29184 D ar_activity: Host button pressed at time 20220104202405
-01-04 15:24:05.689 29184 29184 D ar_activity: New host == 100

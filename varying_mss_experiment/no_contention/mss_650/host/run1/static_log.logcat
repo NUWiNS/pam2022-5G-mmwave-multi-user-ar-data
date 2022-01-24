@@ -1,6 +1,0 @@
---------- beginning of main
---------- beginning of system
-10-21 11:59:00.223 14458 14458 D ar_activity: Screen tap recorded at 2021-10-21 11:59:00.222
-10-21 11:59:00.225 14458 14490 D ar_activity: Anchor can be drawn at time 20211021155900
-10-21 11:59:00.228 14458 14490 D ar_activity: Anchor has been placed at time 20211021155900
-10-21 11:59:03.863 14458 14490 D ar_activity: The anchor id was successfully shared 20211021155903
