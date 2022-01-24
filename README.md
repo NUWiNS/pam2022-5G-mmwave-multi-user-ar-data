@@ -1,5 +1,5 @@
 # Can 5G mmWave support Multi-User AR?
-Data from our PAM 2022 publication where we conducted multi-user AR measurements over 5G mmWave and LTE networks
+Data from our PAM 2022 publication where we conducted multi-user AR measurements over 5G mmWave and LTE networks.
 
 If you use this dataset in your publication, please cite us as follows:
 ```
