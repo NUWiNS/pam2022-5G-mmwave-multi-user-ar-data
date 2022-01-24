@@ -23,7 +23,6 @@ The data directory contains different directories pertaining to various experime
 1. Baseline experiment (Section 4.1-4.5) 
 2. Varying MSS experiment (Section 4.6)
 3. ICMP background traffic experiment (Section 4.6)
-4. Power data (Section 5)
 
 Each such directory has sub directories based on the type of experiments. There are two parts to each data collected: Host and the Resolver data.
 
