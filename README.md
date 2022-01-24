@@ -54,7 +54,9 @@ Example:
 
 /home/user/data/experiment_name/subdirectory/resolver/run_number
 
-There can be multiple directories (signifying multiple runs) in the host and resolver directories. The script can extract latencies for multiple measurement runs provided the name of the run directory is exactly the same in host and resolver directory.
+There can be multiple directories (signifying multiple runs) in the host and resolver directories. 
+
+The script can extract latencies for multiple measurement runs provided the name of the run directory is exactly the same in host and resolver directory.
 ```
 
 The script generates a file called `latency.csv` denoting the latency components for a particular run. 
