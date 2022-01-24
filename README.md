@@ -14,7 +14,7 @@ year={2022}
 
 Below is an image of the workflow of multi-user AR applications.
 
-<img src="application-workflow/app.pdf" width="30%"/>
+<img src="app.pdf" width="30%"/>
 
 ## Dataset Description
 
