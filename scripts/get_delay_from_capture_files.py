@@ -3,7 +3,6 @@ import pyshark
 import sys
 import time 
 
-from os import sync
 from datetime import datetime
 
 # each run consists of a host and resolver part of data
@@ -180,7 +179,36 @@ for host_path in host_dirs:
                 last_data_pkt_system_time_resolve = pkt.systemtime
                 last_data_pkt_system_time_resolve = datetime.strptime(last_data_pkt_system_time_resolve, "%H:%M:%S.%f")
                 last_data_pkt_found = 1
-
+    
+    #recalculate delay 2b with the first burst only 
+    # if the experiment is with mss 400 or 650 Bytes, the ips are IPv4 else it is IPv6
+    # we change the filters accordingly
+    if 'mss_400' in resolve_pcap:
+        data_filter = 'ip.src == %s && frame.len == 468' %(phone_ip)
+    elif 'mss_650' in resolve_pcap:
+        data_filter = 'ip.src == %s && frame.len == 718' %(phone_ip)
+    else:
+        data_filter = 'ipv6.src == %s && frame.len > 1000' %(phone_ip)
+    res_cap_temp = pyshark.FileCapture(resolve_pcap, only_summaries=True,display_filter=data_filter)
+    start_flag = 0
+    pkt_time_rel = []
+    for temp_pkt in res_cap_temp:
+        if start_flag == 0:
+            prev_time = float(temp_pkt.time)
+            start_flag = 1
+        else:
+            if (float(temp_pkt.time) - prev_time) >= 0.3:
+                delay_2b_end_time = pkt_time_rel[-1]
+                break
+            else:
+                pkt_time_rel.append(float(temp_pkt.time))
+                prev_time = float(temp_pkt.time)
+    res_cap_temp.close()
+    try:
+        delay_2b_end_time = pkt_time_rel[-1]
+    except:
+        print("Old 2b value retained")
+        delay_2b_end_time = last_ack_relative_list[-3]
     delay_2x = notification_data_pkt_system_time - last_data_pkt_system_time_host
     if delay_2x.days < 0:
         # negative 2x would mean that either the phones are not synchronised properly
