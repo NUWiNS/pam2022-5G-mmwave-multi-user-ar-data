@@ -4,7 +4,7 @@ Data from our PAM 2022 publication where we conducted multi-user AR measurements
 If you use this dataset in your publication, please cite us as follows:
 ```
 @InProceedings{ghoshal:pam2022,
-author={Ghoshal, Moinak and Das, Pranab and Kong, Zhaoning and Xu, Qiang and Hu, Y. Charlie and Koutsonikolas, Dimitrios and Li, Yuanjie},
+author={Ghoshal, Moinak and Dash, Pranab and Kong, Zhaoning and Xu, Qiang and Hu, Y. Charlie and Koutsonikolas, Dimitrios and Li, Yuanjie},
 title={Can 5G mmWave support Multi-User AR?},
 booktitle={Passive and Active Measurement (PAM)},
 year={2022}
