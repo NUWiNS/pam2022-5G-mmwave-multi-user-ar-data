@@ -73,7 +73,7 @@ ___
 For energy drain and power draw experiments, the processing scripts and programs are located in the `honeycomb_s` module.
 To get the module please run the following
 ```
-git submodule update --recursive
+git submodule update --init --recursive
 ```
  
 Please see following example to use the `honeycomb_s` 
