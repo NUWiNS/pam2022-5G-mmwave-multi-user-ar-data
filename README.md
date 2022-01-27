@@ -77,8 +77,8 @@ git submodule update --init --recursive
 ```
  
 Please see the following example to use the `honeycomb_s`.
+<br>The scripts can be found in the `honeycomb_s/scripts`.
 <br>To compute for data/power_data/subdirectory/host/run_number/.
-<br>The following scripts can be found in the `honeycomb_s/scripts`.
 ```
 python3 scripts/generate_raw_timeline.py <path to interval.txt> <path to current.txt> timeline.snippet
 python3 scripts/generate_config.py <path to timeline traces> timeline.snippet config
