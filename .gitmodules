@@ -1,0 +1,3 @@
+[submodule "scripts/honeycomb_s"]
+	path = scripts/honeycomb_s
+	url = https://github.com/ddashgit/honeycomb_s.git
