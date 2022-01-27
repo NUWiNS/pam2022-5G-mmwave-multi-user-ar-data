@@ -23,12 +23,20 @@ The data directory contains different directories pertaining to various experime
 1. Baseline experiment (Section 4.1-4.5) 
 2. Varying MSS experiment (Section 4.6)
 3. ICMP background traffic experiment (Section 4.6)
+4. Energy drain and power draw experiment (Section 5.2)
 
 Each such directory has sub directories based on the type of experiments. There are two parts to each data collected: Host and the Resolver data.
 
 The Host and Resolver directories contain 2 files: 
 * **capture.pcap**: Packet capture file recorded while doing the measurements. We use this file to extract the latency components discussed in Section 4 of the paper.
 * **static_log.logcat**: This file contains application logged timestamps of events like tapping the screen to place an object or when an object resolution has finished.
+
+For energy drain and power draw experiment, the following files are located in Host and Resolver subdirectories in `data/power_data/`:
+* **Timeline traces** : These are the timeline traces for CPU and GPU
+* **screen.trace** : Screen power trace
+* **intial.log** : The initial state of the CPU and GPU frequencies
+* **current.txt** : It contain the timeline, current and voltage
+* **interval.txt** : A given time interval [T1, T2]
 
 ## Scripts
 
@@ -60,3 +68,30 @@ The script can extract latencies for multiple measurement runs provided the name
 
 The script generates a file called `latency.csv` denoting the latency components for a particular run. 
 
+
+___
+For energy drain and power draw experiments, the processing scripts and programs are located in the `honeycomb_s` module.
+To get the module please run the following
+```
+git submodule update --recursive
+```
+ 
+Please see following example to use the `honeycomb_s` 
+To compute for data/power_data/subdirectory/host/run_number/
+```
+python3 scripts/generate_raw_timeline.py <path to interval.txt> <path to current.txt> timeline.snippet
+python3 scripts/generate_config.py <path to timeline traces> timeline.snippet config
+bin/run config > utilization
+ 
+python3 scripts/cpu_gpu_power_timeline.py utilization <path to cpu model> <path to gpu model> cpu_gpu_timeline.csv
+python3 scripts/camera_timeline.py <path to current.txt> <path to interval.txt> <path to camera model> camera_timeline.csv
+python3 scripts/screen_timeline.py <path to screen.trace> <path to current.txt> <path to interval.txt> screen_timeline.csv
+```
+The power models are located in scripts/models
+1. cpu.model : CPU power model
+1. gpu.model : GPU power model
+1. camera.model : Camera power model
+ 
+The cpu_gpu_timeline.csv, camera_timeline.csv and screen_timeline.csv contain the cpu & gpu; camera and; screen power timeline respectively.
+ 
+For further information please refer to README of `honeycomb_s`.
