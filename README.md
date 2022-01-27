@@ -78,7 +78,7 @@ git submodule update --init --recursive
  
 Please see the following example to use the `honeycomb_s`.
 <br>The scripts can be found in the `honeycomb_s/scripts`.
-<br>To compute for data/power_data/subdirectory/host/run_number/.
+<br>To compute for `data/power_data/subdirectory/host/run_number/`.
 ```
 python3 scripts/generate_raw_timeline.py <path to interval.txt> <path to current.txt> timeline.snippet
 python3 scripts/generate_config.py <path to timeline traces> timeline.snippet config
@@ -88,7 +88,7 @@ python3 scripts/cpu_gpu_power_timeline.py utilization <path to cpu model> <path 
 python3 scripts/camera_timeline.py <path to current.txt> <path to interval.txt> <path to camera model> camera_timeline.csv
 python3 scripts/screen_timeline.py <path to screen.trace> <path to current.txt> <path to interval.txt> screen_timeline.csv
 ```
-The power models are located in scripts/models
+The power models are located in `scripts/models`
 1. cpu.model : CPU power model
 1. gpu.model : GPU power model
 1. camera.model : Camera power model
