@@ -70,14 +70,15 @@ The script generates a file called `latency.csv` denoting the latency components
 
 
 ___
-For energy drain and power draw experiments, the processing scripts and programs are located in the `honeycomb_s` module.
+For energy drain and power draw experiments, the processing scripts and programs are located in the `honeycomb_s` module located in `scripts/`.
 To get the module please run the following
 ```
 git submodule update --init --recursive
 ```
  
-Please see following example to use the `honeycomb_s` 
-To compute for data/power_data/subdirectory/host/run_number/
+Please see the following example to use the `honeycomb_s`.
+<br>To compute for data/power_data/subdirectory/host/run_number/.
+<br>The following scripts can be found in the `honeycomb_s/scripts`.
 ```
 python3 scripts/generate_raw_timeline.py <path to interval.txt> <path to current.txt> timeline.snippet
 python3 scripts/generate_config.py <path to timeline traces> timeline.snippet config
